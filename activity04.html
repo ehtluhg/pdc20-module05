@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>PDC20 - Module 5 - Activity 4</title>
+        <script type="text/javascript"></script>
+    </head>
+    <body>
+        <script>
+            // Inheritance
+            class myToy
+            {
+                constructor()
+                {
+                    this.brand = "Toyota";
+                }
+            }
+
+            class Vehicle extends myToy
+            {
+                constructor(model, variant)
+                {
+                    super();
+                    this.model = model;
+                    this.variant = variant;
+                }
+            }
+
+            var v = new Vehicle("2022", "Wigo");
+            alert(v.brand + " " + v.model + " " + v.variant);
+        </script>
+    </body>
+</html>

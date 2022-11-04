@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>PDC20 - Module 5 - Activity 2</title>
+        <script type="text/javascript"></script>
+    </head>
+    <body>
+        <script>
+            function vehicle()
+            {
+                this.vehicleType = "vehicleType";
+            }
+            
+            vehicle.prototype.display = function()
+            {
+                return "The brand is: " + this.vehicleType;
+            }
+
+            function myCar(vehicleType)
+            {
+                this.vehicleType = vehicleType;
+            }
+            
+            myCar.prototype = Object.create(vehicle.prototype);
+            var car = new myCar("Toyota");
+
+            alert(car.display());
+        </script>
+    </body>
+</html>
